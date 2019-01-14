@@ -22,6 +22,8 @@ const createWindow = ()=>{
     mainWindow.on('close', ()=>{
         mainWindow = null;
     });
+
+    require('./main-process/menu.js')
 }
 app.on('ready', createWindow);
 
@@ -32,7 +34,7 @@ app.on('windows-all-close', ()=>{
 });
 
 app.on('activate', ()=>{
-    if(win === null) {
+    if(mainWindow === null) {
         createWindow();
     }
 });

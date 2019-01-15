@@ -24,6 +24,7 @@ const createWindow = ()=>{
     });
 
     require('./main-process/menu.js')
+    require('./main-process/msg-a.js')
 }
 app.on('ready', createWindow);
 

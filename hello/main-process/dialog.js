@@ -16,15 +16,15 @@ const {dialog} = require('electron');
 // })
 
 
-dialog.showOpenDialog({
-    properties : ['openDirectory', 'openFile']
-}, (files)=>{
-    console.log(files);
-})
+// dialog.showOpenDialog({
+//     properties : ['openDirectory', 'openFile']
+// }, (files)=>{
+//     console.log(files);
+// })
 
-dialog.showSaveDialog({
-    title : 'save something',
-    filters : [{name : 'some', extensions: ['js']}]
-}, (filename)=>{
-    console.log(filename);
-})
+// dialog.showSaveDialog({
+//     title : 'save something',
+//     filters : [{name : 'some', extensions: ['js']}]
+// }, (filename)=>{
+//     console.log(filename);
+// })

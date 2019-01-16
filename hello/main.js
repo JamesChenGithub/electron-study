@@ -19,7 +19,7 @@ const createWindow = ()=>{
     mainWindow.loadURL(indexpath);
     mainWindow.webContents.openDevTools(false);
 
-    mainWindow.on('close', ()=>{
+    mainWindow.on('closed', ()=>{
         mainWindow = null;
     });
 
@@ -30,7 +30,7 @@ const createWindow = ()=>{
 }
 app.on('ready', createWindow);
 
-app.on('windows-all-close', ()=>{
+app.on('windows-all-closed', ()=>{
     if(process.platform !== 'darwin') {
         app.quit();
     }

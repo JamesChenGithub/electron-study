@@ -23,8 +23,10 @@ const createWindow = ()=>{
         mainWindow = null;
     });
 
-    require('./main-process/menu.js')
-    require('./main-process/msg-a.js')
+    require('./main-process/menu.js');
+    require('./main-process/msg-a.js');
+    require('./main-process/tray.js');
+    require('./main-process/dialog.js');
 }
 app.on('ready', createWindow);
 

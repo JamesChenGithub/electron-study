@@ -1,19 +1,18 @@
 
-var TRTCKitDeviceType = {
-    Unknown : 0,
-    Camera : 1,
-    Mic : 2,
-    Speaker : 3,
-    Screen : 4,
-
-}
+const {TRTCKitMediaDeviceType} = require('./trtckit-enum')
 
 function TRTCKitDevice() {
-    this.deviceid = null;
-    this.deviceName = null;
-    this.deviceType = TRTCKitDeviceType.Unknown;
+    this.deviceid = "";
+    this.deviceName = "";
+    this.deviceType = TRTCKitMediaDeviceType.Unknown;
 
-    var setInfo = function (devtype, devid) {
-
+    var setInfo = function (devtype, devid, devName) {
+        this.deviceid =  devid;
+        this.deviceName = devName;
+        this.deviceType = devtype;
     }
+}
+
+module.exports = {
+    TRTCKitDevice : TRTCKitDevice,
 }

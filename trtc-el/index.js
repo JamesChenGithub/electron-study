@@ -1,35 +1,60 @@
 const {app, BrowserWindow} = require('electron');
 const url = require('url');
 const path = require('path');
-// const pdf = require('./main-process/pdf.js').pdf;
+const {TRTCKitApp} = require('./main-process/trtckit/trtckit-app');
+const { session } = require('electron');
+
 
 let mainWindow;
+let trtckitApp;
+
+
 
 const createWindow = ()=>{
-    mainWindow = new BrowserWindow({
-        width : 800,
-        height : 600
-    });
 
-    const indexpath = url.format({
-        pathname : path.join(__dirname, 'index.html'),
-        protocol : 'file:',
-        slashes : true
-    });
+    trtckitApp = new TRTCKitApp();
+    console.log(trtckitApp.sdkAppid, trtckitApp.accountType);
+    // 查询cookie是否有登录信息，如果有，则直接从本地登录
+    session.defaultSession.cookies.get({}, (error, cookies) => {
+        console.log(error, cookies);
 
-    mainWindow.loadURL(indexpath);
-    mainWindow.webContents.openDevTools(false);
+        if (cookies === null || cookies.length === 0) {
+            // 如果没有则跑登录界面
 
-    mainWindow.on('closed', ()=>{
-        mainWindow = null;
-    });
+            let loginWindow = new BrowserWindow({
+                width : 300,
+                height : 400
+            });
+        
+            const indexpath = url.format(path.join(__dirname, './sections/login.html'));
+        
+            loginWindow.loadURL(indexpath);
+            
+        
+            loginWindow.on('closed', ()=>{
+                loginWindow = null;
+            });
 
-    require('./main-process/trtckit.js');
-    // require('./main-process/msg-a.js');
-    // require('./main-process/tray.js');
-    // require('./main-process/dialog.js');
-
-    // pdf(mainWindow);
+        } else {
+            mainWindow = new BrowserWindow({
+                width : 800,
+                height : 600
+            });
+        
+            const indexpath = url.format({
+                pathname : path.join(__dirname, './sections/index.html'),
+                protocol : 'file:',
+                slashes : true
+            });
+        
+            mainWindow.loadURL(indexpath);
+            mainWindow.webContents.openDevTools(false);
+        
+            mainWindow.on('closed', ()=>{
+                mainWindow = null;
+            });
+        }
+      })
     
 }
 

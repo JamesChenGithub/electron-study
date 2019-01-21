@@ -1,4 +1,5 @@
 const {TRTCKitVideoFillMode} = require('./trtckit-enum')
+
 function TRTCKitUser(){ 
     this.userid = "";
     this.hasAudio = false;
@@ -6,9 +7,9 @@ function TRTCKitUser(){
     this.volume = 0;
     this.audioQuality = 0;
     this.netQuality = 0;
-    this.renderMode = TRTCKitVideoFillMode.Fill
+    this.renderMode = TRTCKitVideoFillMode.Fill;
 }
 
 module.exports = {
-    TRTCKitUser:TRTCKitUser,
+    TRTCKitUser : TRTCKitUser,
 }

@@ -1,0 +1,136 @@
+body {
+    background-color: red
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+input,
+button,
+select {
+    width: 95%;
+    height: 25px;
+    text-align: center;
+    vertical-align: middel;
+}
+
+ul,
+li {
+    list-style: none;
+    text-align: left;
+    // margin-left: 10px; 
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+td {
+    align-content: left;
+}
+
+.top_div {
+    display: flex;
+    width: 100%;
+    height: auto;
+}
+
+.step_div {
+    position: absolute;
+    float: left;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: lightgray;
+}
+
+.step_div ul {
+    line-height: 36px;
+}
+
+.step_div li:hover {
+    background-color: bisque;
+}
+
+.main_div {
+    position: absolute;
+    top: 0;
+    left: 100px;
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+.login_div {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    top: 0px;
+    left: 0px;
+}
+
+.render_div {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+
+.log_div {
+    position: absolute;
+    align-content: center;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(187, 187, 157);
+}
+
+
+.log_content {
+    width: 100%;
+    height: 100%;
+    border: 1px black solid;
+    box-shadow: 0px;
+    background-color: white;
+}
+
+.local_render,
+.remote_render0,
+.remote_render1,
+.remote_render2,
+.remote_render3,
+.remote_render4{
+    width: 320px;
+    height: 240px;
+    float: left;
+    margin: 5px
+}
+
+
+.local_render {
+    background-color: orange;
+}
+
+.remote_render0 {
+    background-color: white;
+}
+
+.remote_render1 {
+    background-color: gray;
+}
+
+.remote_render2 {
+    background-color: black;
+}
+
+.remote_render3 {
+    background-color: green;
+}
+
+.remote_render4 {
+    background-color: greenyellow;
+} */

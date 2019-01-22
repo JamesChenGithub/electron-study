@@ -1,0 +1,41 @@
+html, body,
+ {
+    margin: 0 auto;
+    padding: 0 auto;
+    height: 100%;   
+}
+
+.container {
+    width: 100%;
+    height: 200px;
+    background-color: red;
+}
+
+.funcnav {
+    background-color: rgb(20, 20, 20);
+    /* width: 5%; */
+    min-width: 60px;
+    max-width: 60px;
+    height: 100%;
+    float:left;
+    font-style: white;
+    
+}
+
+.funclist{
+    background-color: rgb(250, 250, 250);
+    /* width: 15%; */
+    min-width: 150px;
+    max-width: 200px;
+    height: 100%;
+    float:left;
+}
+
+.funccontent{
+    background-color: rgb(240, 240, 240);
+    /* width: 80%; */
+    min-width: 75%;
+    max-width: 80%;
+    height: 100%;
+    float:right;
+}

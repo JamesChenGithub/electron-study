@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- <link href="../../script/divtest1.css" rel="stylesheet" type="text/css" /> -->
+    <script type="text/css" >
+        body,
+        div {
+            margin: 0;
+            padding: 0;
+        }
+
+        ol,
+        ul,
+        li {
+            list-style: none;
+        }
+
+        img {
+            border: 0;
+        }
+
+        body {
+            color: #000;
+            background: #FFF;
+            text-align: center;
+        }
+
+        .clearfix: after {
+                clear: both;
+                content: ".";
+                display: block;
+                height: 0 pt;
+                visibility: hidden;
+                overflow: hidden;
+            }
+
+            .clear {
+                clear: both;
+                height: 1 px;
+                margin-top: -1 px;
+                width: 100 % ;
+            }
+
+            .dis {
+                display: block;
+            }
+
+            .undis {
+                display: none;
+            }
+
+        /*此上面代码是初始CSS模板，下面是新写CSS布局框架代码*/
+
+        #header, #centers, #footer {
+            width: 100%;
+            margin: 0 auto
+            clear: both;
+            font-size: 18px;
+            line-height: 68px;
+            font-weight: bold;
+        }
+
+        #
+        header {
+            height: 68 px;
+            border: 1 pxsolid# CCCCCC;
+        }
+
+        #
+        centers {
+            padding: 8 px0;
+        }
+
+        #
+        footer {
+            border-top: 1 pxsolid# CCCCCC;
+            background: #F2F2F2;
+        }
+
+        #
+        centers.c_left {
+            float: left;
+            width: 230px;
+            border: 1px solid #00CC66;
+            background: #F7F7F7;
+            margin-right: 5 px;
+        }
+
+        #centers.c_right {
+            float: left;
+            width: 500 px;
+            border: 1 pxsolid #00CC66;
+    background: # F7F7F7
+        }
+    </script>
+</head>
+
+<body>
+    <div id="header">我是头部（上）</div>
+    <div id="centers">
+        <div class="c_left">我是中的左</div>
+        <div class="c_right">我是中的右</div>
+        <div class="clear"> </div>
+    </div>
+    <div id="footer">我是底部（下）</div>
+</body>
+
+</html>

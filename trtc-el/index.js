@@ -27,7 +27,7 @@ const createWindow = () => {
         height: 600
     });
 
-    mainWindow.loadURL(path.join('file:/', __dirname, './src/index.html'));
+    mainWindow.loadURL(path.join('file:/', __dirname, './src/wx.html'));
     mainWindow.on('closed', () => {
         mainWindow = null;
     });

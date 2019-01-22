@@ -19,6 +19,8 @@ function TRTCKitApp() {
     this.user = null;
     this.userSig = "";
 
+    this.roomNum = "";
+
     this.room = null;
 
     //================================

@@ -8,6 +8,8 @@ function TRTCKitUser(){
     this.audioQuality = 0;
     this.netQuality = 0;
     this.renderMode = TRTCKitVideoFillMode.Fill;
+    this.delay = 0;
+    this.lost = 0.0;
 }
 
 module.exports = {

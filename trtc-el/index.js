@@ -23,8 +23,10 @@ const createWindow = () => {
 
 
     mainWindow = new BrowserWindow({
-        width: 800,
-        height: 600
+        width: 600,
+        height: 480,
+        minWidth : 600,
+        minHeight : 480,
     });
 
     mainWindow.loadURL(path.join('file:/', __dirname, './src/wx.html'));

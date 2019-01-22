@@ -26,7 +26,7 @@ const createWindow = ()=>{
                 height : 400,
             });
         
-            const indexpath = url.format(path.join('file:/', __dirname,'./sections/login.html'));
+            const indexpath = url.format(path.join('file:/', __dirname,'./src/login.html'));
         
             loginWindow.loadURL(indexpath);
             loginWindow.webContents.openDevTools(true);
@@ -47,7 +47,7 @@ const createWindow = ()=>{
                 height : 600
             });
         
-            mainWindow.loadURL(path.join('file:/', __dirname,'./sections/index.html'));
+            mainWindow.loadURL(path.join('file:/', __dirname,'./src/index.html'));
             mainWindow.webContents.openDevTools(false);
         
             mainWindow.on('closed', ()=>{

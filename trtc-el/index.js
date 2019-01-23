@@ -27,6 +27,7 @@ const createWindow = () => {
         height: 480,
         minWidth : 600,
         minHeight : 480,
+        titleBarStyle: 'hidden',
     });
 
     mainWindow.loadURL(path.join('file:/', __dirname, './src/flex.html'));

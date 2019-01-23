@@ -53,6 +53,17 @@
         background-color: orange;
     }
 </style>
+
+<script>
+    setInterval(() => {
+        var divs = document.getElementsByClassName("six");
+        for (var div in divs) {
+            div.setAttribute("style","background-color:rgb(10,0,0)");
+            div.setAttribute("style","display:none");  
+        }
+
+    }, 5000);
+</script>
 <html>
 
 <body>

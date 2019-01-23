@@ -29,7 +29,7 @@ const createWindow = () => {
         minHeight : 480,
     });
 
-    mainWindow.loadURL(path.join('file:/', __dirname, './src/wx.html'));
+    mainWindow.loadURL(path.join('file:/', __dirname, './src/wx2.html'));
     mainWindow.on('closed', () => {
         mainWindow = null;
     });
